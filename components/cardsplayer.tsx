@@ -58,10 +58,10 @@ const CardsPlayer = () => {
           </div>
         ))}
       </div>
-      <div className={`sticky flex items-center transition-all duration-300 justify-center bottom-8 left-1/2 -translate-x-1/2 ${isVisible ? 'w-fit gap-4 py-4 px-8' : 'w-0 p-0 gap-0'} h-fit bg-[rgba(42,42,42,0.25)] rounded-lg shadow-md backdrop-blur-[20px] rounded-full  shadow-md`}>
+      <div className={`sticky flex items-center transition-all duration-300 justify-center bottom-8 left-1/2 -translate-x-1/2 ${isVisible ? 'w-fit gap-4 py-4 px-8' : 'w-0 p-0 gap-0'} h-fit bg-[rgba(42,42,42,0.25)] backdrop-blur-[20px] rounded-full  shadow-md`}>
         {cards.map((card, idx) => (
-          <div key={idx} className={`h-4 transition-all duration-500  relative bg-[#101010] ${selectedCard === idx ? 'w-12' : 'w-4'} rounded-full overflow-hidden`} onClick={() => handleDotClick(idx)}>
-            {selectedCard === idx && <div className={`absolute left-0 top-0 h-full ${isPlaying && "bg-gray-500"} rounded-full`} style={{ width: `${progress}%` }}></div>}
+          <div key={idx} className={`h-4 transition-all duration-500  relative bg-gray-100 ${selectedCard === idx ? 'w-12' : 'w-4'} rounded-full overflow-hidden`} onClick={() => handleDotClick(idx)}>
+            {selectedCard === idx && <div className={`absolute left-0 top-0 h-full ${isPlaying && "bg-[#101010]"} rounded-full`} style={{ width: `${progress}%` }}></div>}
           </div>
         ))}
         {isVisible && <button className='p-2 rounded-full' onClick={handlePlayPauseClick}>{isPlaying ? <PauseIcon className="w-4 h-4 rounded-full" /> : <PlayIcon className="w-4 h-4 rounded-full" />}</button>}
