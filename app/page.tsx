@@ -6,11 +6,17 @@ export default function Home() {
     <main className="flex min-h-[300vh] flex-col items-center justify-around bg-black">
       <div className='w-full text-center flex flex-col gap-8'>
         <h3 className='text-white text-8xl'>Here you can see the Slider</h3>
-        <p className='text-white text-2xl'>Scroll Down v</p>
+        <p className='text-white text-2xl'>Scroll Down</p>
+        <div className='text-white flex flex-col'>
+          <span className='text-2xl'>V</span>
+        </div>
       </div>
       <CardsPlayer />
       <div className='w-full text-center flex flex-col gap-8'>
-        <p className='text-white text-2xl'>Scroll Up v</p>
+      <div className='text-white flex flex-col'>
+          <span className='text-2xl rotate-180'>V</span>
+        </div>
+        <p className='text-white text-2xl'>Scroll Up</p>
         <h3 className='text-white text-8xl'>Here you can see the Slider</h3>
       </div>
     </main>
