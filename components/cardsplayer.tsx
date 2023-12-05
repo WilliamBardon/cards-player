@@ -48,7 +48,7 @@ const CardsPlayer = () => {
   const handlePlayPauseClick = () => setIsPlaying(!isPlaying);
 
   return (
-    <div className='relative w-full  bg-[#101010]'>
+    <div className='relative w-full bg-[#101010]'>
       <div ref={containerRef} className='relative flex flex-row gap-48 w-full h-fit  px-96 py-48 overflow-x-hidden'>
         {cards.map((card, idx) => (
           <div key={idx} className='relative shadow-md min-w-[60vw] max-h-[60vh] overflow-hidden w-full h-full bg-black rounded-lg flex flex-col justify-start items-start'>
